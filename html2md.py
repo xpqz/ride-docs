@@ -1,7 +1,11 @@
-import os
 from bs4 import BeautifulSoup
+import os 
 
-def convert_directory_to_markdown(directory_path):
+def convert_directory_to_markdown(directory_path, output_directory=None):
+    # If output directory is specified and doesn't exist, create it
+    if output_directory and not os.path.exists(output_directory):
+        os.makedirs(output_directory)
+
     for root, _, files in os.walk(directory_path):
         for file in files:
             if file.endswith('.htm'):
@@ -9,15 +13,23 @@ def convert_directory_to_markdown(directory_path):
                     xhtml_content = f.read()
                 markdown_content = xhtml_to_markdown(xhtml_content).replace('\r\n', '\n')
                 md_filename = os.path.splitext(file)[0].replace(' ', '_') + ".md"
-                with open(os.path.join(root, md_filename), 'w', encoding='utf-8') as f:
+                
+                # Decide where to save the markdown file
+                if output_directory:
+                    save_path = os.path.join(output_directory, md_filename)
+                else:
+                    save_path = os.path.join(root, md_filename)
+                
+                with open(save_path, 'w', encoding='utf-8') as f:
                     f.write(markdown_content)
 
 def global_substitutions(xhtml):
     """Perform global substitutions before processing."""
-    return xhtml.replace('&#160;', ' ')
+    xhtml = xhtml.replace('&#160;', ' ')
+    # xhtml = xhtml.replace('<MadCap:', '<').replace('</MadCap:', '</')
+    return xhtml
 
 def process_elements(tag):
-    """Utility function to replace elements with the desired markdown."""
     # Bold for 'Name' class
     if 'Name' in tag.attrs.get('class', []):
         tag.string = f"**{tag.get_text(' ', strip=True)}**"
@@ -38,7 +50,7 @@ def convert_code_blocks(pre_tags):
 def xhtml_to_markdown(xhtml):
     """Convert XHTML to markdown."""
     xhtml = global_substitutions(xhtml)
-    soup = BeautifulSoup(xhtml, 'html.parser')
+    soup = BeautifulSoup(xhtml, 'lxml-xml')
 
     # Convert <title> tags to markdown H1 headers
     for title in soup.find_all('title'):
@@ -52,9 +64,17 @@ def xhtml_to_markdown(xhtml):
     for tag in soup.find_all(True, class_=['Name', 'Dyalog', 'DyalogExample', 'h3Right', 'Italic']):
         process_elements(tag)
 
+    # Cross-references
+    for xref in soup.find_all('MadCap:xref'):
+        href = xref.attrs.get('href', '')
+        target_filename, _, anchor = href.partition('#')
+        target_filename = target_filename.replace(' ', '_').replace('.htm', '.md')
+        markdown_link = f'[{xref.get_text()}]({target_filename}#{anchor})'
+        xref.replace_with(markdown_link)
+
     # Convert <p> tags to markdown paragraphs
     for p in soup.find_all('p'):
-        p.replace_with(f"\n{p.get_text()}\n")
+        p.replace_with(f"\n{p.get_text().strip()}\n")
 
     # Convert <table> to markdown tables
     for table in soup.find_all('table'):
@@ -89,4 +109,4 @@ def xhtml_to_markdown(xhtml):
     return soup.get_text()
 
 if __name__ == '__main__':
-    convert_directory_to_markdown('test')
+    convert_directory_to_markdown('test', output_directory='/Users/stefan/work/dydoc/test/_converted')
