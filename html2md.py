@@ -12,45 +12,49 @@ def convert_directory_to_markdown(directory_path):
                 with open(os.path.join(root, md_filename), 'w', encoding='utf-8') as f:
                     f.write(markdown_content)
 
+def global_substitutions(xhtml):
+    """Perform global substitutions before processing."""
+    return xhtml.replace('&#160;', ' ')
 
 def process_elements(tag):
     """Utility function to replace elements with the desired markdown."""
     # Bold for 'Name' class
     if 'Name' in tag.attrs.get('class', []):
-        tag.replace_with(f"**{tag.get_text(' ', strip=True)}**")
-    # Code backticks for 'Dyalog' class
-    elif 'Dyalog' in tag.attrs.get('class', []):
-        tag.replace_with(f"`{tag.get_text(' ', strip=True)}`")
-    # Code backticks for 'h3Right' class
-    elif 'h3Right' in tag.attrs.get('class', []):
+        tag.string = f"**{tag.get_text(' ', strip=True)}**"
+    # Code backticks for 'Dyalog', 'DyalogExample', and 'h3Right' classes
+    elif any(d_class in tag.attrs.get('class', []) for d_class in ['Dyalog', 'DyalogExample', 'h3Right']):
         tag.string = f"`{tag.get_text(' ', strip=True)}`"
+    # Italic for 'Italic' class
+    elif 'Italic' in tag.attrs.get('class', []):
+        tag.string = f"*{tag.get_text(' ', strip=True)}*"
     return tag
 
 def convert_code_blocks(pre_tags):
     """Convert <pre> tags to markdown code blocks."""
     for pre in pre_tags:
-        markdown_code = "```apl\n" + pre.get_text() + "\n```"
+        markdown_code = "```apl\n" + pre.get_text() + "\n```\n"
         pre.replace_with(markdown_code)
 
 def xhtml_to_markdown(xhtml):
     """Convert XHTML to markdown."""
+    xhtml = global_substitutions(xhtml)
     soup = BeautifulSoup(xhtml, 'html.parser')
 
     # Convert <title> tags to markdown H1 headers
     for title in soup.find_all('title'):
-        title.replace_with(f"# {title.get_text()}\n")
+        title.replace_with(f"# {title.get_text().strip()}\n")
+
+    # Convert <h1>, <h2>, ... to markdown headers
+    for hx in soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']):
+        hx.replace_with(f"{'#' * int(hx.name[1])} {hx.get_text().strip()}\n")
 
     # Process all elements with the desired classes
-    for tag in soup.find_all(True, class_=['Name', 'Dyalog', 'h3Right']):
+    for tag in soup.find_all(True, class_=['Name', 'Dyalog', 'DyalogExample', 'h3Right', 'Italic']):
         process_elements(tag)
 
     # Convert <p> tags to markdown paragraphs
     for p in soup.find_all('p'):
         p.replace_with(f"\n{p.get_text()}\n")
-
-    # Convert <h1>, <h2>, ... to markdown headers
-    for hx in soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']):
-        hx.replace_with(f"\n{'#' * int(hx.name[1])} {hx.get_text()}\n")
 
     # Convert <table> to markdown tables
     for table in soup.find_all('table'):
