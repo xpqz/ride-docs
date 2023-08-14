@@ -26,7 +26,6 @@ def convert_directory_to_markdown(directory_path, output_directory=None):
 def global_substitutions(xhtml):
     """Perform global substitutions before processing."""
     xhtml = xhtml.replace('&#160;', ' ')
-    # xhtml = xhtml.replace('<MadCap:', '<').replace('</MadCap:', '</')
     return xhtml
 
 def process_elements(tag):
@@ -44,7 +43,13 @@ def process_elements(tag):
 def convert_code_blocks(pre_tags):
     """Convert <pre> tags to markdown code blocks."""
     for pre in pre_tags:
-        markdown_code = "```apl\n" + pre.get_text() + "\n```\n"
+        for br in pre.find_all("br"):
+            br.replace_with("\n")
+        code_content = pre.get_text()
+        if 'nonAPLcode' in pre.attrs.get('class', []):
+            markdown_code = f"```\n{code_content}\n```\n"
+        else:
+            markdown_code = f"```apl\n{code_content}\n```\n"
         pre.replace_with(markdown_code)
 
 def xhtml_to_markdown(xhtml):
@@ -59,6 +64,10 @@ def xhtml_to_markdown(xhtml):
     # Convert <h1>, <h2>, ... to markdown headers
     for hx in soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']):
         hx.replace_with(f"{'#' * int(hx.name[1])} {hx.get_text().strip()}\n")
+
+    # Process <code> tags
+    for code_tag in soup.find_all('code'):
+        code_tag.replace_with(f"`{code_tag.get_text(' ', strip=True)}`")
 
     # Process all elements with the desired classes
     for tag in soup.find_all(True, class_=['Name', 'Dyalog', 'DyalogExample', 'h3Right', 'Italic']):
@@ -103,10 +112,14 @@ def xhtml_to_markdown(xhtml):
             for i, li in enumerate(ol.find_all('li'))
         ]))
 
-    # Convert <pre class="APLCode"> to markdown fenced code blocks
-    convert_code_blocks(soup.find_all('pre', class_='APLCode'))
+    # Convert <pre class="APLCode"> and <pre class="nonAPLcode"> 
+    # to markdown fenced code blocks
+    convert_code_blocks(soup.find_all('pre', class_=['APLCode', 'nonAPLcode']))
 
     return soup.get_text()
 
 if __name__ == '__main__':
-    convert_directory_to_markdown('test', output_directory='/Users/stefan/work/dydoc/test/_converted')
+    convert_directory_to_markdown(
+        'RIDE', 
+        output_directory='/Users/stefan/work/dydoc/docs/'
+    )
