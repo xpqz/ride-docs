@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../the_dyalog_development_environment/">
+      
       
       <link rel="icon" href="../img/favicon-32.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
@@ -275,6 +277,123 @@
   
 
     
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Input Windows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Input Windows
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#session-window" class="md-nav__link">
+    Session Window
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-window" class="md-nav__link">
+    Edit Window
+  </a>
+  
+    <nav class="md-nav" aria-label="Edit Window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toolbar-edit-window" class="md-nav__link">
+    Toolbar (Edit Window)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-and-replace-edit-window" class="md-nav__link">
+    Search and Replace (Edit Window)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trace-window" class="md-nav__link">
+    Trace Window
+  </a>
+  
+    <nav class="md-nav" aria-label="Trace Window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-trace-window" class="md-nav__link">
+    Search (Trace Window)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolbar-trace-window" class="md-nav__link">
+    Toolbar (Trace Window)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exiting-the-trace-window" class="md-nav__link">
+    Exiting the Trace Window
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -295,6 +414,82 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#session-window" class="md-nav__link">
+    Session Window
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-window" class="md-nav__link">
+    Edit Window
+  </a>
+  
+    <nav class="md-nav" aria-label="Edit Window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toolbar-edit-window" class="md-nav__link">
+    Toolbar (Edit Window)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-and-replace-edit-window" class="md-nav__link">
+    Search and Replace (Edit Window)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trace-window" class="md-nav__link">
+    Trace Window
+  </a>
+  
+    <nav class="md-nav" aria-label="Trace Window">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-trace-window" class="md-nav__link">
+    Search (Trace Window)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolbar-trace-window" class="md-nav__link">
+    Toolbar (Trace Window)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exiting-the-trace-window" class="md-nav__link">
+    Exiting the Trace Window
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -314,11 +509,309 @@
 <h1 id="input-windows">Input Windows</h1>
 <p>Instead of just a single Session window, the Dyalog Development Environment can comprise multiple windows:</p>
 <ul>
-<li>Session window – created when a Dyalog Session is started through the RIDE and always present while the Session is live. There is only one Session window. For more information, see <a href="../session_window_input/">Section </a>.</li>
-<li>Edit windows – created and destroyed dynamically as required. There can be multiple Edit windows (one for each APL object). For more information, see <a href="../edit_window/">Section </a>.</li>
-<li>Trace window – created and destroyed dynamically as required. There is only one Trace window. For more information, see <a href="../trace_window/">Section </a>.</li>
+<li>Session window – created when a Dyalog Session is started through the RIDE and always present while the Session is live. There is only one <a href="../session_window_input/">Session window</a>.</li>
+<li>Edit windows – created and destroyed dynamically as required. There can be multiple <a href="../edit_window/">Edit windows</a> (one for each APL object).</li>
+<li>Trace window – created and destroyed dynamically as required. There is only one <a href="../trace_window/">Trace window</a>.</li>
 </ul>
 <p>When multiple windows are open, the window that has the focus is referred to as the active window.</p>
+<h2 id="session-window">Session Window</h2>
+<p>The Session window contains:</p>
+<ul>
+<li>the input line – the last line entered in the Session window; this is (usually) the line into which you type an expression to be evaluated.</li>
+<li>a gutter – the left-hand side of the window is a gutter that can include input/output information. Specifically:a small red circle in the gutter is present on every line that has been modified since last pressing Enter. This includes old lines that have been modified as well as new lines. These indicators show which lines will be executed when you subsequently hit Enter, at which point the indicator is removed.a left bracket indicates "groups" of default output (to distinguish it from <code>⎕</code> or <code>⍞</code> output).</li>
+<li>a small red circle in the gutter is present on every line that has been modified since last pressing Enter. This includes old lines that have been modified as well as new lines. These indicators show which lines will be executed when you subsequently hit Enter, at which point the indicator is removed.</li>
+<li>a left bracket indicates "groups" of default output (to distinguish it from <code>⎕</code> or <code>⍞</code> output).</li>
+<li>the Session log – a history of previously-entered expressions and the results they produced.</li>
+</ul>
+<p>If a log file is being used, then the Session log is loaded into memory when a Dyalog Session is started. When the Dyalog Session is closed, the Session log is written to the log file, replacing its previous contents.</p>
+<h2 id="edit-window">Edit Window</h2>
+<p>This section applies to the RIDE's built-in editor. A different editor can be specified by setting the RIDE_EDITOR configuration parameter to the fully-qualified path of the desired editor's executable file.</p>
+<p>The Edit window is used to define new objects as well as view/amend existing objects.</p>
+<p>An Edit window can be opened from the Session window in any of the following ways:</p>
+<ul>
+<li>Enter <code>)ED &lt;object name&gt;</code></li>
+<li>Enter <code>⎕ED '&lt;object name&gt;'</code></li>
+<li>Enter <code>&lt;object name&gt;</code> <ED>(for an explanation of the <ED> syntax, see <a href="../keyboard_shortcuts_and_command_codes/">here</a>)</li>
+<li>Double-click on/after <code>&lt;object name&gt;</code></li>
+</ul>
+<p>If the object name does not already exist, then it is assumed to of function/operator type. Different types can be explicitly specified using the <code>)ED</code> or <code>⎕ED</code> options – see <code>)ED</code> or <code>⎕ED</code> in the Dyalog APL Language Reference Guide.</p>
+<p>An Edit window can be opened from the Trace window by entering the Edit command (<ED>), double‑clicking the cursor or clicking the button in the <a href="../toolbar_tracewindow/">toolbar</a>. The position of the cursor when this is done determines the name of the object that the Edit window is for:</p>
+<ul>
+<li>If the cursor is on or immediately after <code>&lt;object name&gt;</code>, then the Edit window opens on that name.</li>
+<li>If the cursor is anywhere else, then the Edit window opens for the most recently-referenced function on the stack. This is a naked edit.</li>
+</ul>
+<p>An Edit window can be opened from another Edit window in any of the following ways:</p>
+<ul>
+<li>Move the cursor over/after <code>&lt;object name&gt;</code> and enter the Edit command (<ED>)</li>
+<li>Double-click on/after <code>&lt;object name&gt;</code></li>
+</ul>
+<p>By default, the Edit window is docked to the right of the Session Window.</p>
+<h3 id="toolbar-edit-window">Toolbar (Edit Window)</h3>
+<p>The Edit Window's toolbar:</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Action</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Save changes and return</td>
+<td>Saves changes and closes the Edit Window.</td>
+</tr>
+<tr>
+<td></td>
+<td>Toggle line numbers</td>
+<td>Turns the display of line numbers on/off.</td>
+</tr>
+<tr>
+<td></td>
+<td>Comment selected text</td>
+<td>Add a comment symbol (<code>⍝</code>) to the beginning of the line in which the cursor is positioned. If text has been selected, then a comment symbol is added at the start of the line on which the selection starts and at the start of each subsequent line of text within the selection. Same as the Comment Out command (<code>&lt;AO&gt;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Uncomment selected text</td>
+<td>Removes the comment symbol (<code>⍝</code>) at the beginning of the line in which the cursor is positioned. If text has been selected, then comment symbols are removed from the start of each selected line of text. Comment symbols that are not at the start of a line of text cannot be removed. Same as the Uncomment command (<code>&lt;DO&gt;</code>).</td>
+</tr>
+<tr>
+<td></td>
+<td>Search</td>
+<td>Opens the <a href="../search_and_replace_editwindow/">Search bar</a>, enabling a search to be performed.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="search-and-replace-edit-window">Search and Replace (Edit Window)</h3>
+<p>The  icon in the Edit window's toolbar opens the Search bar, enabling a search for every occurrence of a specified string (this can include APL glyphs) to be performed within the code in the Edit window; optionally, a replacement string can be applied on an individual basis.</p>
+<p>The Search bar (default)</p>
+<p>The  icon (Toggle replace mode) extends the Search bar to include a Replace field and related icons, as shown below.</p>
+<p>The Search bar (extended to include display of the Replace fields)</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Action</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Search for previous match</td>
+<td>Positions the cursor at the previous occurrence of the Search text.</td>
+</tr>
+<tr>
+<td></td>
+<td>Search for next match</td>
+<td>Positions the cursor at the next occurrence of the Search text.</td>
+</tr>
+<tr>
+<td></td>
+<td>Find in selection</td>
+<td>Only searches within the selected text.</td>
+</tr>
+<tr>
+<td></td>
+<td>Close</td>
+<td>Closes the Search bar.</td>
+</tr>
+<tr>
+<td></td>
+<td>Replace</td>
+<td>Replaces the selected text in the Edit window with the text specified in the Replace field of the Search bar and highlights the next match.</td>
+</tr>
+<tr>
+<td></td>
+<td>Replace all</td>
+<td>Replaces all occurrences of the text specified in the Find field of the Search bar with that specified in the Replace field of the Search bar.</td>
+</tr>
+</tbody>
+</table>
+<p>The Find field includes three filters, as detailed below. Any combination of these filters can be applied when performing a search.</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Action</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Match case</td>
+<td>Applies a case-sensitive filter so that only occurrences that match the case of the string in the Find field are highlighted.</td>
+</tr>
+<tr>
+<td></td>
+<td>Match whole word</td>
+<td>Only highlights whole words that match the string in the Find field. Some glyphs are treated as punctuation when identifying "whole words", for example, <code>; : , { } [ ] ( )</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Use regular expression</td>
+<td>Allows regular expressions to be specified in the Find field.</td>
+</tr>
+</tbody>
+</table>
+<p>To search for a string</p>
+<ol>
+<li>Enter the string to search for in the Find field in one of the following ways:- Press the Search button  and enter the string directly in the Find field.</li>
+<li>Enter the Search command (<code>&lt;SC&gt;</code>) and enter the string directly in the Find field.</li>
+<li>
+<p>Select the string in the Trace window and enter the Search command (<code>&lt;SC&gt;</code>) or press the Search button ; the selected string is copied to the Find field.
+All occurrences of the specified string are highlighted in the Edit window and the number of occurrences is displayed to the right of the Find field. If the content of the Edit window is sufficiently long for there to be a vertical scroll bar, then the locations of occurrences of the specified string within the entire content are identified by yellow marks overlaid on the scroll bar.</p>
+</li>
+<li>
+<p>Press the Enter key to select the first occurrence of the search string after the last position of the cursor.</p>
+</li>
+<li>Press the Search for next match button  to advance the selection to the next occurrence of the search string.</li>
+<li>Repeat step 3 as required (the search is cyclic).</li>
+<li>Press the Esc key to exit the search functionality.</li>
+</ol>
+<p>To replace a string</p>
+<ol>
+<li>Do one of the following:</li>
+<li>Enter the replacement string directly in the Replace field.</li>
+<li>Press the Enter key to select the first occurrence of the search string after the last position of the cursor.</li>
+<li>Do one of the following:</li>
+<li>Press the Close button to exit the search and replace functionality.</li>
+</ol>
+<h2 id="trace-window">Trace Window</h2>
+<p>The Trace window aids debugging by enabling you to step through your code line by line, display variables in Edit windows and watch them change as the execution progresses. Alternatively, you can use the Session window and Edit windows to experiment with and correct your code.</p>
+<p>A Trace window can be opened from the Session window by entering  <code>&lt;expression&gt;</code> <code>&lt;TC&gt;</code>. This is an explicit trace and lets you step through the execution of any non-primitive functions/operators in the expression.</p>
+<p>By default, Dyalog is also configured to initiate an automatic trace whenever an error occurs, that is, the Trace window opens and becomes the active window and the line that caused the execution to suspend is selected. This is controlled by the interpreter configuration parameter <code>TRACE_ON_ERROR</code> (for information on configuration parameters, see the Dyalog for <operating system> Installation and Configuration Guide specific to the operating system that you are using).</p>
+<p>By default, the Trace window is docked beneath the Session and Edit windows. Other than setting/removing <a href="../breakpoints/">breakpoints</a>, Trace windows are read only.</p>
+<h3 id="search-trace-window">Search (Trace Window)</h3>
+<p>The  icon in the Trace window's toolbar opens the Search bar, enabling a search for every occurrence of a specified string (this can include APL glyphs) to be performed within the code in the Trace window.</p>
+<p>The Search Bar</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Action</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Search for previous match</td>
+<td>Positions the cursor at the previous occurrence of the Search text.</td>
+</tr>
+<tr>
+<td></td>
+<td>Search for next match</td>
+<td>Positions the cursor at the next occurrence of the Search text.</td>
+</tr>
+<tr>
+<td></td>
+<td>Find in selection</td>
+<td>Only searches within the selected text.</td>
+</tr>
+<tr>
+<td></td>
+<td>Close</td>
+<td>Closes the Search bar.</td>
+</tr>
+</tbody>
+</table>
+<p>To search for a string</p>
+<ol>
+<li>Enter the string to search for in the Find field in one of the following ways:- Press the Search button  and enter the string directly in the Find field.</li>
+<li>Enter the Search command (<code>&lt;SC&gt;</code>) and enter the string directly in the Find field.</li>
+<li>
+<p>Select the string in the Trace window and enter the Search command (<code>&lt;SC&gt;</code>) or press the Search button ; the selected string is copied to the Find field.
+All occurrences of the specified string are highlighted in the Trace window and the number of occurrences is displayed to the right of the Find field. If the content of the Trace window is sufficiently long for there to be a vertical scroll bar, then the locations of occurrences of the specified string within the entire content are identified by yellow marks overlaid on the scroll bar.</p>
+</li>
+<li>
+<p>Press the Enter key to select the first occurrence of the search string after the last position of the cursor.</p>
+</li>
+<li>Press the Search for next match button  to advance the selection to the next occurrence of the search string.</li>
+<li>Repeat step 3 as required (the search is cyclic).</li>
+<li>Press the Close button  to exit the search functionality.</li>
+</ol>
+<h3 id="toolbar-trace-window">Toolbar (Trace Window)</h3>
+<p>The Edit Window's toolbar</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Action</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Quit this function</td>
+<td>Cuts the execution stack back one level.</td>
+</tr>
+<tr>
+<td></td>
+<td>Toggle line numbers</td>
+<td>Turns the display of line numbers on/off.</td>
+</tr>
+<tr>
+<td></td>
+<td>Execute line</td>
+<td>Executes the current line and advances to the next line.</td>
+</tr>
+<tr>
+<td></td>
+<td>Trace into expression</td>
+<td>Traces execution of the current line and advances to the next line. If the current line calls a user-defined function then this is also traced.</td>
+</tr>
+<tr>
+<td></td>
+<td>Stop on next line of calling function</td>
+<td>Continues execution of the code in the Trace window from the current line to completion of the current function or operator. If successful, the selection advances to the next line of the calling function (if there is one).</td>
+</tr>
+<tr>
+<td></td>
+<td>Continue execution of this thread</td>
+<td>Closes the Trace window and resumes execution of the current application thread from the current line.</td>
+</tr>
+<tr>
+<td></td>
+<td>Continue execution of all threads</td>
+<td>Closes the Trace window and resumes execution of all suspended threads.</td>
+</tr>
+<tr>
+<td></td>
+<td>Interrupt</td>
+<td>Interrupts execution with a weak interrupt.</td>
+</tr>
+<tr>
+<td></td>
+<td>Edit name</td>
+<td>Converts the Trace window into an Edit window as long as the cursor is on a blank line or in an empty space. However, if the cursor is on or immediately after an object name that is not the name of the suspended function, then an Edit window for that object name is opened.</td>
+</tr>
+<tr>
+<td></td>
+<td>Clear stops for this object</td>
+<td>Clears all breakpoints (resets <code>⎕STOP</code> ) on the function(s) in the Edit / Trace windows.</td>
+</tr>
+<tr>
+<td></td>
+<td>Search</td>
+<td>Opens the Search bar, enabling a search to be performed.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exiting-the-trace-window">Exiting the Trace Window</h3>
+<p>To close the Trace window:</p>
+<ul>
+<li>click  in the Trace window's tab</li>
+<li>click  in the Trace window's toolbar</li>
+<li>use the Escape command (<code>&lt;EP&gt;</code>)</li>
+<li>use the Quit command (<code>&lt;QT&gt;</code>)</li>
+<li>press the Esc key</li>
+</ul>
+<p>When the Trace window is closed, the function within that Trace window is removed from the stack. It is possible to close all Trace/Edit windows without clearing the stack by selecting the <code>Window &gt; Close All Windows</code> menu option or using <code>2023⌶</code> (for information on this I-beam, see the Dyalog APL Language Reference Guide).</p>
 
 
 
