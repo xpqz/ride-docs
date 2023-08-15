@@ -12,6 +12,8 @@
         <link rel="prev" href="../installation/">
       
       
+        <link rel="next" href="../the_dyalog_development_environment/">
+      
       <link rel="icon" href="../img/favicon-32.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
@@ -319,22 +321,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#type-start" class="md-nav__link">
-    Type: Start
+  <a href="#start" class="md-nav__link">
+    Start
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#type-connect" class="md-nav__link">
-    Type: Connect
+  <a href="#connect" class="md-nav__link">
+    Connect
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#type-listen" class="md-nav__link">
-    Type: Listen
+  <a href="#listen" class="md-nav__link">
+    Listen
   </a>
   
 </li>
@@ -360,6 +362,21 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the_dyalog_development_environment/" class="md-nav__link">
+        The Dyalog Development Environment
+      </a>
     </li>
   
 
@@ -421,22 +438,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#type-start" class="md-nav__link">
-    Type: Start
+  <a href="#start" class="md-nav__link">
+    Start
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#type-connect" class="md-nav__link">
-    Type: Connect
+  <a href="#connect" class="md-nav__link">
+    Connect
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#type-listen" class="md-nav__link">
-    Type: Listen
+  <a href="#listen" class="md-nav__link">
+    Listen
   </a>
   
 </li>
@@ -605,7 +622,7 @@
 <li>amend the configuration</li>
 </ul>
 <p>A configuration can also be activated by clicking the  button to the right of its name in the list of configurations.</p>
-<h4 id="type-start">Type: Start</h4>
+<h4 id="start">Start</h4>
 <p>The most common use of the RIDE is where the RIDE launches an APL interpreter process and connects to it. The RIDE allocates a random TCP port and instructs the launched interpreter to connect to it immediately. The RIDE is also able to launch remote processes on machines that support Secure Shell (SSH) logins, in which case the communication between the RIDE and the interpreter is also encrypted.</p>
 <p>To start a Dyalog Session</p>
 <ol>
@@ -616,7 +633,7 @@
 <li>Click START.</li>
 </ol>
 <p>In the Dyalog Session, selecting New Session in the <a href="../file_menu/">File menu</a> launches another instance of the interpreter whose path is specified in the path to executable field.</p>
-<h4 id="type-connect">Type: Connect</h4>
+<h4 id="connect">Connect</h4>
 <p>The RIDE connects to a specific running (local or remote) Dyalog interpreter that is listening for connections. This is typically used when the RIDE is monitoring processes that have been started to provide some kind of service and to debug them if something unexpected happens.</p>
 <p>You should only configure a Dyalog interpreter to listen for connections if either of the following apply:</p>
 <ul>
@@ -656,7 +673,7 @@ The type-dependent information fields are displayed.</li>
 <li>Select a security protocol from the drop-down list.</li>
 <li>Click CONNECT.</li>
 </ol>
-<h4 id="type-listen">Type: Listen</h4>
+<h4 id="listen">Listen</h4>
 <p>The RIDE waits for a local or remote interpreter to connect to it. This approach is more secure than configuring the interpreter to listen for connections, because an intruder will only be able to communicate with the RIDE rather than an APL system. An application that needs to be debugged can initiate the connection to a listening RIDE using <code>3502⌶</code> to set <code>RIDE_INIT</code> when debugging is desired (see <a href="../3502_ibeam_ride/">3502⌶ </a>).</p>
 <p>To start a Dyalog Session</p>
 <ol>
