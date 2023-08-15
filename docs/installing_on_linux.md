@@ -1,7 +1,3 @@
-
-
-
-
 ### Installing on Linux
 
 

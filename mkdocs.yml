@@ -1,8 +1,8 @@
 site_name: RIDE User Guide
 repo_url: https://github.com/xpqz/ride-docs
-repo_name: xpqz/ride-docs
+# repo_name: xpqz/ride-docs
 nav:
-  - about_this_document.md
+  - index.md
   - introduction.md
   - Installation:
     - prerequisites.md
@@ -130,10 +130,15 @@ extra_css:
   - style/main.css
   - style/admonition-ucmdhelp.css
 
-# plugins:
-#   - search
+plugins:
+  - search
 
-# markdown_extensions:
-#   - admonition
-#   - abbr
+markdown_extensions:
+  - admonition
+  - abbr
+
+extra:
+  version:
+    provider: mike
+
 

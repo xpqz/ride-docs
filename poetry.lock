@@ -307,6 +307,28 @@ files = [
 ]
 
 [[package]]
+name = "mike"
+version = "1.1.2"
+description = "Manage multiple versions of your MkDocs-powered documentation"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "mike-1.1.2-py3-none-any.whl", hash = "sha256:4c307c28769834d78df10f834f57f810f04ca27d248f80a75f49c6fa2d1527ca"},
+    {file = "mike-1.1.2.tar.gz", hash = "sha256:56c3f1794c2d0b5fdccfa9b9487beb013ca813de2e3ad0744724e9d34d40b77b"},
+]
+
+[package.dependencies]
+jinja2 = "*"
+mkdocs = ">=1.0"
+pyyaml = ">=5.1"
+verspec = "*"
+
+[package.extras]
+dev = ["coverage", "flake8 (>=3.0)", "shtab"]
+test = ["coverage", "flake8 (>=3.0)", "shtab"]
+
+[[package]]
 name = "mkdocs"
 version = "1.5.2"
 description = "Project documentation with Markdown."
@@ -628,6 +650,21 @@ files = [
 ]
 
 [[package]]
+name = "verspec"
+version = "0.1.0"
+description = "Flexible version handling"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "verspec-0.1.0-py3-none-any.whl", hash = "sha256:741877d5633cc9464c45a469ae2a31e801e6dbbaa85b9675d481cda100f11c31"},
+    {file = "verspec-0.1.0.tar.gz", hash = "sha256:c4504ca697b2056cdb4bfa7121461f5a0e81809255b41c03dda4ba823637c01e"},
+]
+
+[package.extras]
+test = ["coverage", "flake8 (>=3.7)", "mypy", "pretend", "pytest"]
+
+[[package]]
 name = "watchdog"
 version = "3.0.0"
 description = "Filesystem events monitoring"
@@ -670,4 +707,4 @@ watchmedo = ["PyYAML (>=3.10)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "d6957cf532fd49aaf2db63724fd33e4be0b6c51522744aa8531950bf7a5a1093"
+content-hash = "1f7ad591d38e948bf05ed27f47523320a1a6c15630e5a9c4b6591ada9c5c0285"

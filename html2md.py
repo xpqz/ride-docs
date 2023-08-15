@@ -58,8 +58,12 @@ def xhtml_to_markdown(xhtml):
     soup = BeautifulSoup(xhtml, 'lxml-xml')
 
     # Convert <title> tags to markdown H1 headers
+    # for title in soup.find_all('title'):
+    #     title.replace_with(f"# {title.get_text().strip()}\n")
+
+    # Remove <title> tags
     for title in soup.find_all('title'):
-        title.replace_with(f"# {title.get_text().strip()}\n")
+        title.replace_with('')
 
     # Convert <h1>, <h2>, ... to markdown headers
     for hx in soup.find_all(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']):
