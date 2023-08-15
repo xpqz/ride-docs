@@ -4,101 +4,102 @@ repo_url: https://github.com/xpqz/ride-docs
 nav:
   - index.md
   - introduction.md
-  - Installation:
-    - prerequisites.md
-    - Installing RIDE:
-      - "Linux": installing_on_linux.md
-      - "macOS": installing_on_macos.md
-      - "Windows": installing_on_windows.md
-    - configuration_ini_file.md
-  - Starting a Dyalog Session:
-    - "Starting a Session": starting_a_dyalog_session.md
-    - The RIDE-Dyalog Session Dialog Box:
-      - "The Session Dialog": the_ridedyalog_session_dialog_box.md
-      - menu_bar.md
-      - list_of_configurations.md
-      - types.md
-      - the_zero_footprint_ride.md
-  - The Dyalog Development Environment:
-    - Session User Interface:
-      - caption.md
-      - Menu Bar:
-        - file_menu.md
-        - edit_menu.md
-        - view_menu.md
-        - action_menu.md
-        - threads_menu.md
-        - window_menu.md
-        - help_menu.md
-      - language_bar.md
-      - session_window.md
-      - status_bar.md
-      - workspace_explorer.md
-      - debug_information_window.md
-      - context_menu.md
-    - Keyboard Key Mappings for APL Glyphs:
-      - "Included Keyboard Mappings": keyboard_key_mappings_for_apl_glyphs.md
-      - other_keyboard_options.md
-  - Input Windows:
-      - session_window_input.md
-      - Edit Window:
-        - edit_window.md
-        - "Toolbar": toolbar_editwindow.md
-        - "Search and Replace": search_and_replace_editwindow.md
-        - exiting_the_edit_window.md
-      - Trace Window:
-        - trace_window.md
-        - search_tracewindow.md
-        - toolbar_tracewindow.md
-        - exiting_the_trace_window.md
-  - Working in a Dyalog Session:
-    - "Keyboard Shortcuts": keyboard_shortcuts_and_command_codes.md
-    - navigating_the_windows.md
-    - display_of_windows.md
-    - entering_apl_characters.md
-    - Entering Expressions:
-      - paired_enclosures.md
-      - autocomplete.md
-      - context_sensitive_help.md
-      - syntax_colouring.md
-    - Executing Expressions:
-      - executing_a_new_expression.md
-      - reexecuting_a_previous_expression.md
-      - reexecuting_multiple_previous_expressions.md
-    - threads.md
-    - Suspending Execution:
-      - suspending_execution.md
-      - breakpoints.md
-      - interrupts.md
-    - terminating_a_dyalog_session.md
-  - RIDE-Specific Language Features:
-    - ridespecific_language_features.md
-    - I-Beams:
-      - "I-Beams": ibeams.md
-      - "3500⌶": 3500_ibeam_ride.md
-      - "3501⌶": 3501_ibeam_ride.md
-      - "3502⌶": 3502_ibeam_ride.md
-    - Configuration Parameters:
-      - configuration_parameters.md
-      - ride_editor.md
-      - ride_init.md
-  - Customising Your Session:
-    - customising_your_session.md
-    - view_menu_customisation.md
-    - Preferences Dialog Box:
-      - general_tab.md
-      - keyboard_tab.md
-      - shortcuts_tab.md
-      - saved_responses_tab.md
-      - colours_tab.md
-      - title_tab.md
-      - menu_tab.md
-      - windows_tab.md
-    - configuration_parameters_ridespecific.md
-  - keyboard_shortcuts.md
-  - Sample Configuration File:
-    - sample_configuration_file.md
-    - "TLS Flags": tls_flags.md
+  - installation.md
+  # - Installation:
+  #   - prerequisites.md
+  #   - Installing RIDE:
+  #     - "Linux": installing_on_linux.md
+  #     - "macOS": installing_on_macos.md
+  #     - "Windows": installing_on_windows.md
+  #   - configuration_ini_file.md
+  # - Starting a Dyalog Session:
+  #   - "Starting a Session": starting_a_dyalog_session.md
+  #   - The RIDE-Dyalog Session Dialog Box:
+  #     - "The Session Dialog": the_ridedyalog_session_dialog_box.md
+  #     - menu_bar.md
+  #     - list_of_configurations.md
+  #     - types.md
+  #     - the_zero_footprint_ride.md
+  # - The Dyalog Development Environment:
+  #   - Session User Interface:
+  #     - caption.md
+  #     - Menu Bar:
+  #       - file_menu.md
+  #       - edit_menu.md
+  #       - view_menu.md
+  #       - action_menu.md
+  #       - threads_menu.md
+  #       - window_menu.md
+  #       - help_menu.md
+  #     - language_bar.md
+  #     - session_window.md
+  #     - status_bar.md
+  #     - workspace_explorer.md
+  #     - debug_information_window.md
+  #     - context_menu.md
+  #   - Keyboard Key Mappings for APL Glyphs:
+  #     - "Included Keyboard Mappings": keyboard_key_mappings_for_apl_glyphs.md
+  #     - other_keyboard_options.md
+  # - Input Windows:
+  #     - session_window_input.md
+  #     - Edit Window:
+  #       - edit_window.md
+  #       - "Toolbar": toolbar_editwindow.md
+  #       - "Search and Replace": search_and_replace_editwindow.md
+  #       - exiting_the_edit_window.md
+  #     - Trace Window:
+  #       - trace_window.md
+  #       - search_tracewindow.md
+  #       - toolbar_tracewindow.md
+  #       - exiting_the_trace_window.md
+  # - Working in a Dyalog Session:
+  #   - "Keyboard Shortcuts": keyboard_shortcuts_and_command_codes.md
+  #   - navigating_the_windows.md
+  #   - display_of_windows.md
+  #   - entering_apl_characters.md
+  #   - Entering Expressions:
+  #     - paired_enclosures.md
+  #     - autocomplete.md
+  #     - context_sensitive_help.md
+  #     - syntax_colouring.md
+  #   - Executing Expressions:
+  #     - executing_a_new_expression.md
+  #     - reexecuting_a_previous_expression.md
+  #     - reexecuting_multiple_previous_expressions.md
+  #   - threads.md
+  #   - Suspending Execution:
+  #     - suspending_execution.md
+  #     - breakpoints.md
+  #     - interrupts.md
+  #   - terminating_a_dyalog_session.md
+  # - RIDE-Specific Language Features:
+  #   - ridespecific_language_features.md
+  #   - I-Beams:
+  #     - "I-Beams": ibeams.md
+  #     - "3500⌶": 3500_ibeam_ride.md
+  #     - "3501⌶": 3501_ibeam_ride.md
+  #     - "3502⌶": 3502_ibeam_ride.md
+  #   - Configuration Parameters:
+  #     - configuration_parameters.md
+  #     - ride_editor.md
+  #     - ride_init.md
+  # - Customising Your Session:
+  #   - customising_your_session.md
+  #   - view_menu_customisation.md
+  #   - Preferences Dialog Box:
+  #     - general_tab.md
+  #     - keyboard_tab.md
+  #     - shortcuts_tab.md
+  #     - saved_responses_tab.md
+  #     - colours_tab.md
+  #     - title_tab.md
+  #     - menu_tab.md
+  #     - windows_tab.md
+  #   - configuration_parameters_ridespecific.md
+  # - keyboard_shortcuts.md
+  # - Sample Configuration File:
+  #   - sample_configuration_file.md
+  #   - "TLS Flags": tls_flags.md
 
 # - function_key_configuration.md
 # - input_windows.md
@@ -116,7 +117,6 @@ nav:
 # - underscored_characters_in_window_captions.md
 # - unsupported_language_elements.md
 # - zero_footprint.md
-
 
 theme:
   favicon: 'img/favicon-32.png'
