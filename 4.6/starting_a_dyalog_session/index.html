@@ -724,28 +724,29 @@
 <hr />
 <p><strong>To start a Dyalog Session</strong></p>
 <ol>
-<li>Open the RIDE-Dyalog Session dialog box.</li>
+<li>Open the <strong>RIDE-Dyalog Session</strong> dialog box.</li>
 <li>Select Start from the Type drop-down list.</li>
-<li>Optionally, check Save protocol log – this  records all communications between the interpreter and the RIDE. The default path/filename for this interpreter‑independent protocol log can be changed.</li>
+<li>Optionally, check <strong>Save protocol log</strong> – this  records all communications between the interpreter and the RIDE. The default path/filename for this interpreter‑independent protocol log can be changed.</li>
 <li>Select a security protocol from the drop-down list.</li>
-<li>Click START.</li>
+<li>Click <strong>START</strong>.</li>
 </ol>
 <hr />
 <p>In the Dyalog Session, selecting New Session in the <a href="../file_menu/">File menu</a> launches another instance of the interpreter whose path is specified in the path to executable field.</p>
 <h4 id="connect">Connect</h4>
 <p>The RIDE connects to a specific running (local or remote) Dyalog interpreter that is listening for connections. This is typically used when the RIDE is monitoring processes that have been started to provide some kind of service and to debug them if something unexpected happens.</p>
-<p>You should only configure a Dyalog interpreter to listen for connections if either of the following apply:</p>
-<ul>
-<li>you have a firewall that allows you specify which client machines will be able to connect</li>
-<li>you use a <a href="../sample_configuration_file/">configuration file</a> to specify suitable security filters to limit access to the interpreter.</li>
-</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You should only configure a Dyalog interpreter to listen for connections if either of the following apply:
+- you have a firewall that allows you specify which client machines will be able to connect
+- you use a <a href="../sample_configuration_file/">configuration file</a> to specify suitable security filters to limit access to the interpreter.</p>
 <p>Your application can use <a href="../3502_ibeam_ride/">3502⌶</a> to enable debugging when it is appropriate.</p>
 <p>To safely experiment with configuring APL to listen for connections, leave the address field in the following examples empty, for example, <code>RIDE_INIT="SERVE::4502"</code>. If the address field is empty, then only local connections are allowed. The <code>*</code> used below instructs the interpreter to listen on all available network adapters.</p>
+</div>
 <hr />
 <p><strong>To start a Dyalog Session</strong></p>
 <ol>
 <li>On the machine that the interpreter will run on, start a Dyalog Session, optionally specifying an IP address/DNS name and port that it will listen for RIDE connections on using the <code>RIDE_INIT</code> configuration parameter. If specified, this will override any <code>RIDE_INIT</code> values defined in a <a href="../configuration_ini_file/">configuration file</a>.</li>
-<li>On the machine that the RIDE is running on: Open the RIDE-Dyalog Session dialog box.Select Connect from the Type drop-down list. Optionally, check Save protocol log – this  records all communications between the interpreter and the RIDE. The default path/filename for this interpreter‑independent protocol log can be changed.Select a security protocol from the drop-down list.
+<li>On the machine that the RIDE is running on: Open the <strong>RIDE-Dyalog Session</strong> dialog box.Select Connect from the Type drop-down list. Optionally, check <strong>Save protocol log</strong> – this  records all communications between the interpreter and the RIDE. The default path/filename for this interpreter‑independent protocol log can be changed.Select a security protocol from the drop-down list.
 The type-dependent information fields are displayed.</li>
 <li>If the security protocol is set to TCP:Host: the IP address/unique DNS name of the machine that the interpreter is running on.Port: the number of the port that the interpreter is listening on. By default, the interpreter listens on port 4502.</li>
 <li>Host: the IP address/unique DNS name of the machine that the interpreter is running on.</li>
@@ -763,15 +764,15 @@ The type-dependent information fields are displayed.</li>
 <li>If the security protocol is set to TLS/SSL then secure connections are enabled:</li>
 <li>Host: the IP address/unique DNS name of the machine that the interpreter is running on.</li>
 <li>Port: the number of the port that the interpreter is listening on. By default, the interpreter listens on port 4502.</li>
-<li>Three optional check boxes (and associated fields) are relevant if you have not added your root certificate to the Microsoft Certificate Store or are not running on the Microsoft Windows operating system:Provide user certificate: if selected, populate the Cert and Key fields with the fully-qualified paths to, and names of, the PEM encoded certificate file and key file respectively – the interpreter (RIDE server) uses this to verify that the RIDE client is permitted to connect to it.Custom root certificates: if selected, populate the Directory field with the fully-qualified path to, and name of, the directory that contains multiple root certificates and key files to use for authentication.Validate server subject common name matches hostname: verifies that the CN (Common Name) field of the server's certificate matches the hostname.</li>
-<li>Provide user certificate: if selected, populate the Cert and Key fields with the fully-qualified paths to, and names of, the PEM encoded certificate file and key file respectively – the interpreter (RIDE server) uses this to verify that the RIDE client is permitted to connect to it.</li>
-<li>Custom root certificates: if selected, populate the Directory field with the fully-qualified path to, and name of, the directory that contains multiple root certificates and key files to use for authentication.</li>
-<li>Validate server subject common name matches hostname: verifies that the CN (Common Name) field of the server's certificate matches the hostname.Click CONNECT.</li>
-<li>Open the RIDE-Dyalog Session dialog box.</li>
-<li>Select Connect from the Type drop-down list.</li>
-<li>Optionally, check Save protocol log – this  records all communications between the interpreter and the RIDE. The default path/filename for this interpreter‑independent protocol log can be changed.</li>
+<li>Three optional check boxes (and associated fields) are relevant if you have not added your root certificate to the Microsoft Certificate Store or are not running on the Microsoft Windows operating system:Provide user certificate: if selected, populate the Cert and Key fields with the fully-qualified paths to, and names of, the PEM encoded certificate file and key file respectively – the interpreter (RIDE server) uses this to verify that the RIDE client is permitted to connect to it.Custom root certificates: if selected, populate the <strong>Directory</strong> field with the fully-qualified path to, and name of, the directory that contains multiple root certificates and key files to use for authentication.Validate server subject common name matches hostname: verifies that the CN (Common Name) field of the server's certificate matches the hostname.</li>
+<li><strong>Provide user certificate</strong>: if selected, populate the Cert and Key fields with the fully-qualified paths to, and names of, the PEM encoded certificate file and key file respectively – the interpreter (RIDE server) uses this to verify that the RIDE client is permitted to connect to it.</li>
+<li><strong>Custom root certificates</strong>: if selected, populate the <strong>Directory</strong> field with the fully-qualified path to, and name of, the directory that contains multiple root certificates and key files to use for authentication.</li>
+<li>Validate server subject common name matches hostname: verifies that the CN (Common Name) field of the server's certificate matches the hostname. Click <strong>CONNECT</strong>.</li>
+<li>Open the <strong>RIDE-Dyalog Session</strong> dialog box.</li>
+<li>Select <strong>Connect</strong> from the <strong>Type</strong> drop-down list.</li>
+<li>Optionally, check <strong>Save protocol log</strong> – this  records all communications between the interpreter and the RIDE. The default path/filename for this interpreter‑independent protocol log can be changed.</li>
 <li>Select a security protocol from the drop-down list.</li>
-<li>Click CONNECT.</li>
+<li>Click <strong>CONNECT</strong>.</li>
 </ol>
 <hr />
 <h4 id="listen">Listen</h4>
