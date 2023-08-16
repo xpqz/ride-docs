@@ -569,15 +569,15 @@
 
 
 <h1 id="input-windows">Input Windows</h1>
-<p>Instead of just a single Session window, the Dyalog Development Environment can comprise multiple windows:</p>
+<p>Instead of just a single <strong>Session</strong> window, the Dyalog Development Environment can comprise multiple windows:</p>
 <ul>
-<li>Session window – created when a Dyalog Session is started through the RIDE and always present while the Session is live. There is only one <a href="../session_window_input/">Session window</a>.</li>
-<li>Edit windows – created and destroyed dynamically as required. There can be multiple <a href="../edit_window/">Edit windows</a> (one for each APL object).</li>
-<li>Trace window – created and destroyed dynamically as required. There is only one <a href="../trace_window/">Trace window</a>.</li>
+<li><strong>Session</strong> window – created when a Dyalog Session is started through the RIDE and always present while the Session is live. There is only one <a href="../session_window_input/">Session window</a>.</li>
+<li><strong>Edit</strong> windows – created and destroyed dynamically as required. There can be multiple <a href="../edit_window/">Edit windows</a> (one for each APL object).</li>
+<li><strong>Trace</strong> window – created and destroyed dynamically as required. There is only one <a href="../trace_window/">Trace window</a>.</li>
 </ul>
 <p>When multiple windows are open, the window that has the focus is referred to as the active window.</p>
 <h2 id="session-window">Session Window</h2>
-<p>The Session window contains:</p>
+<p>The <strong>Session</strong> window contains:</p>
 <ul>
 <li>the input line – the last line entered in the Session window; this is (usually) the line into which you type an expression to be evaluated.</li>
 <li>a gutter – the left-hand side of the window is a gutter that can include input/output information. Specifically:a small red circle in the gutter is present on every line that has been modified since last pressing Enter. This includes old lines that have been modified as well as new lines. These indicators show which lines will be executed when you subsequently hit Enter, at which point the indicator is removed.a left bracket indicates "groups" of default output (to distinguish it from <code>⎕</code> or <code>⍞</code> output).</li>
@@ -587,7 +587,10 @@
 </ul>
 <p>If a log file is being used, then the Session log is loaded into memory when a Dyalog Session is started. When the Dyalog Session is closed, the Session log is written to the log file, replacing its previous contents.</p>
 <h2 id="edit-window">Edit Window</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This section applies to the RIDE's built-in editor. A different editor can be specified by setting the RIDE_EDITOR configuration parameter to the fully-qualified path of the desired editor's executable file.</p>
+</div>
 <p>The Edit window is used to define new objects as well as view/amend existing objects.</p>
 <p>An Edit window can be opened from the Session window in any of the following ways:</p>
 <ul>
@@ -597,7 +600,7 @@
 <li>Double-click on/after <code>&lt;object name&gt;</code></li>
 </ul>
 <p>If the object name does not already exist, then it is assumed to of function/operator type. Different types can be explicitly specified using the <code>)ED</code> or <code>⎕ED</code> options – see <code>)ED</code> or <code>⎕ED</code> in the Dyalog APL Language Reference Guide.</p>
-<p>An Edit window can be opened from the Trace window by entering the Edit command (<ED>), double‑clicking the cursor or clicking the button in the <a href="../toolbar_tracewindow/">toolbar</a>. The position of the cursor when this is done determines the name of the object that the Edit window is for:</p>
+<p>An Edit window can be opened from the Trace window by entering the Edit command (<ED>), double‑clicking the cursor or clicking the <img src="../img/screenshots/i_intext_editname.png" style="margin-left: 3px;margin-right: 3px;margin-bottom: 0px;height: 12px;" /> button in the <a href="../toolbar_tracewindow/">toolbar</a>. The position of the cursor when this is done determines the name of the object that the Edit window is for:</p>
 <ul>
 <li>If the cursor is on or immediately after <code>&lt;object name&gt;</code>, then the Edit window opens on that name.</li>
 <li>If the cursor is anywhere else, then the Edit window opens for the most recently-referenced function on the stack. This is a naked edit.</li>
