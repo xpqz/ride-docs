@@ -767,13 +767,17 @@ The type-dependent information fields are displayed.</li>
 </li>
 </ul>
 </li>
-<li>If the security protocol is set to TLS/SSL then secure connections are enabled:</li>
+<li>If the security protocol is set to TLS/SSL then secure connections are enabled:<ul>
 <li>Host: the IP address/unique DNS name of the machine that the interpreter is running on.</li>
 <li>Port: the number of the port that the interpreter is listening on. By default, the interpreter listens on port 4502.</li>
-<li>Three optional check boxes (and associated fields) are relevant if you have not added your root certificate to the Microsoft Certificate Store or are not running on the Microsoft Windows operating system:Provide user certificate: if selected, populate the Cert and Key fields with the fully-qualified paths to, and names of, the PEM encoded certificate file and key file respectively – the interpreter (RIDE server) uses this to verify that the RIDE client is permitted to connect to it.Custom root certificates: if selected, populate the <strong>Directory</strong> field with the fully-qualified path to, and name of, the directory that contains multiple root certificates and key files to use for authentication.Validate server subject common name matches hostname: verifies that the CN (Common Name) field of the server's certificate matches the hostname.</li>
+<li>Three optional check boxes (and associated fields) are relevant if you have not added your root certificate to the Microsoft Certificate Store or are not running on the Microsoft Windows operating system:<ul>
 <li><strong>Provide user certificate</strong>: if selected, populate the Cert and Key fields with the fully-qualified paths to, and names of, the PEM encoded certificate file and key file respectively – the interpreter (RIDE server) uses this to verify that the RIDE client is permitted to connect to it.</li>
 <li><strong>Custom root certificates</strong>: if selected, populate the <strong>Directory</strong> field with the fully-qualified path to, and name of, the directory that contains multiple root certificates and key files to use for authentication.</li>
 <li>Validate server subject common name matches hostname: verifies that the CN (Common Name) field of the server's certificate matches the hostname. Click <strong>CONNECT</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>Open the <strong>RIDE-Dyalog Session</strong> dialog box.</li>
 <li>Select <strong>Connect</strong> from the <strong>Type</strong> drop-down list.</li>
 <li>Optionally, check <strong>Save protocol log</strong> – this  records all communications between the interpreter and the RIDE. The default path/filename for this interpreter‑independent protocol log can be changed.</li>
