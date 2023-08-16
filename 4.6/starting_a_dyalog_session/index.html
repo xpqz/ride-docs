@@ -748,19 +748,25 @@
 <li>On the machine that the interpreter will run on, start a Dyalog Session, optionally specifying an IP address/DNS name and port that it will listen for RIDE connections on using the <code>RIDE_INIT</code> configuration parameter. If specified, this will override any <code>RIDE_INIT</code> values defined in a <a href="../configuration_ini_file/">configuration file</a>.</li>
 <li>On the machine that the RIDE is running on: Open the <strong>RIDE-Dyalog Session</strong> dialog box.Select Connect from the Type drop-down list. Optionally, check <strong>Save protocol log</strong> – this  records all communications between the interpreter and the RIDE. The default path/filename for this interpreter‑independent protocol log can be changed.Select a security protocol from the drop-down list.
 The type-dependent information fields are displayed.</li>
-<li>If the security protocol is set to TCP:Host: the IP address/unique DNS name of the machine that the interpreter is running on.Port: the number of the port that the interpreter is listening on. By default, the interpreter listens on port 4502.</li>
+<li>If the security protocol is set to TCP:Host: the IP address/unique DNS name of the machine that the interpreter is running on. <ul>
 <li>Host: the IP address/unique DNS name of the machine that the interpreter is running on.</li>
 <li>Port: the number of the port that the interpreter is listening on. By default, the interpreter listens on port 4502.</li>
-<li>If the security protocol is set to SSH then the RIDE connects to a remote interpreter using the secure shell network protocol:</li>
+</ul>
+</li>
+<li>If the security protocol is set to SSH then the RIDE connects to a remote interpreter using the secure shell network protocol:<ul>
 <li>Host: the IP address/unique DNS name of the machine that the interpreter is running on.</li>
 <li>Port: the number of the port that the interpreter is listening on. By default, the interpreter listens on port 4502.</li>
 <li>SSH Port: the number of the port to use for SSH. The default is 22.</li>
 <li>User: the user name on the machine that the interpreter is running on.</li>
 <li>Key file: the fully-qualified filename of the SSH identity file.</li>
-<li>Password/passphrase: either the password corresponding to the specified User or, if an encrypted key file is being used for authentication, the passphrase.If an encrypted Key File is specified, a passphrase is required for authentication.If an unencrypted Key File is specified, a password/passphrase is not required.If a Key File is not specified, then the password corresponding to the specified User is required.</li>
+<li>Password/passphrase: either the password corresponding to the specified User or, if an encrypted key file is being used for authentication, the passphrase.If an encrypted Key File is specified, a passphrase is required for authentication.If an unencrypted Key File is specified, a password/passphrase is not required.If a Key File is not specified, then the password corresponding to the specified User is required.<ul>
 <li>If an encrypted Key File is specified, a passphrase is required for authentication.</li>
 <li>If an unencrypted Key File is specified, a password/passphrase is not required.</li>
 <li>If a Key File is not specified, then the password corresponding to the specified User is required.</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>If the security protocol is set to TLS/SSL then secure connections are enabled:</li>
 <li>Host: the IP address/unique DNS name of the machine that the interpreter is running on.</li>
 <li>Port: the number of the port that the interpreter is listening on. By default, the interpreter listens on port 4502.</li>
