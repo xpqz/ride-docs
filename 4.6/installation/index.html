@@ -608,14 +608,17 @@
 </ol>
 <hr />
 <h2 id="configuration-ini-file">Configuration (.ini) File</h2>
-<p>A .ini configuration file can be used to define settings for the <code>RIDE_INIT</code> configuration parameter. By default, the interpreter will look for a ride.ini file in:</p>
+<p>A .ini configuration file can be used to define settings for the <code>RIDE_INIT</code> configuration parameter. By default, the interpreter will look for a <strong>ride.ini</strong> file in:</p>
 <ul>
-<li>the directory in which the default session and log files are stored, for example, C:\Users\JohnDoe\AppData\Local\Programs\Dyalog\ (on Microsoft Windows)</li>
-<li>$HOME/.dyalog/ (on IBM AIX, macOS and Linux)</li>
+<li>the directory in which the default session and log files are stored, for example, <strong>C:\Users\JohnDoe\AppData\Local\Programs\Dyalog</strong> (on Microsoft Windows)</li>
+<li><strong>$HOME/.dyalog</strong> (on IBM AIX, macOS and Linux)</li>
 </ul>
-<p>This file is not automatically created by Dyalog but can be created manually. Examples of the fields that you might want to include within the .ini configuration file are included in <a href="../sample_configuration_file/">Appendix 1</a>.</p>
-<p>A different name and location for the .ini configuration file can be specified by including a second <code>mode</code>, <code>CONFIG</code>, in the <a href="../ride_init/">RIDE_INIT</a> parameter and setting it so that <code>CONFIG=&lt;filename&gt;</code>, where <code>&lt;filename&gt;</code> is the fully-qualified path to, and name of, a .ini configuration file containing name-value pairs related to mode, certificate details, and so on.</p>
-<p>The .ini configuration file must be located on the machine on which the interpreter is running (this is not necessarily the same machine as the one on which the RIDE is running).</p>
+<p>This file is not automatically created by Dyalog but can be created manually. Examples of the fields that you might want to include within the .ini configuration file are included in the <a href="../sample_configuration_file/">sample configuration file</a>.</p>
+<p>A different name and location for the .ini configuration file can be specified by including a second <code>mode</code>, <code>CONFIG</code>, in the <a href="../ride_init/">RIDE_INIT</a> parameter and setting it so that <code>CONFIG=&lt;filename&gt;</code>, where <code>&lt;filename&gt;</code> is the fully-qualified path to, and name of, a <strong>.ini</strong> configuration file containing name-value pairs related to mode, certificate details, and so on.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <strong>.ini</strong> configuration file must be located on the machine on which the interpreter is running (this is not necessarily the same machine as the one on which the RIDE is running).</p>
+</div>
 
 
 
