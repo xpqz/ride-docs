@@ -283,12 +283,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-ride" class="md-nav__link">
-    Installing RIDE
+  <a href="#installing-the-ride" class="md-nav__link">
+    Installing the RIDE
   </a>
   
-    <nav class="md-nav" aria-label="Installing RIDE">
+    <nav class="md-nav" aria-label="Installing the RIDE">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zero-footprint" class="md-nav__link">
+    Zero Footprint
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#installing-on-linux" class="md-nav__link">
@@ -470,12 +477,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-ride" class="md-nav__link">
-    Installing RIDE
+  <a href="#installing-the-ride" class="md-nav__link">
+    Installing the RIDE
   </a>
   
-    <nav class="md-nav" aria-label="Installing RIDE">
+    <nav class="md-nav" aria-label="Installing the RIDE">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zero-footprint" class="md-nav__link">
+    Zero Footprint
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#installing-on-linux" class="md-nav__link">
@@ -553,7 +567,15 @@
 <li>the operating system must be supported by the underlying technology <a href="https://github.com/electron/electron/blob/v13.4.0/docs/tutorial/support.md">Electron</a>.</li>
 </ul>
 <p>If Dyalog is not installed on the machine that the RIDE is being installed on, then the APL385 font and keyboard mappings installed with the RIDE mean that they are available when running a Dyalog Session through the RIDE. However, to be able to enter APL glyphs outside a Dyalog Session (for example, in text files or emails) you will need to download and install the appropriate files (files and instructions are available from <a href="https://www.dyalog.com/apl-font-keyboard.htm">here</a>, as is the Dyalog Unicode IME for Microsoft Windows).</p>
-<h2 id="installing-ride">Installing RIDE</h2>
+<h2 id="installing-the-ride">Installing the RIDE</h2>
+<p>Installation instructions are dependent on operating system.</p>
+<h3 id="zero-footprint">Zero Footprint</h3>
+<p>The use of the RIDE from a browser requires no installation on the machine where the RIDE will run. However, the RIDE must be installed on the machine where APL is installed, so that Dyalog can act as a web server, making the necessary files available to the browser.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When installing the RIDE, if you select the default location suggested by the installer then APL can be launched as a RIDE server without creating a <a href="../sample_configuration_file/">configuration file</a>.</p>
+</div>
+<p>On non-Windows platforms, the Zero Footprint RIDE is automatically installed to the default location (<strong>[DYALOG]/RIDEapp</strong>) when Dyalog is installed and no additional installation is necessary to use the <a href="../the_zero_footprint_ride/">Zero Footprint RIDE</a> from a browser.</p>
 <h3 id="installing-on-linux">Installing on Linux</h3>
 <p>The installation process for the RIDE is the same irrespective of whether it is installed as a stand-alone product or on a machine that already has Dyalog installed.</p>
 <p>To install the RIDE</p>
@@ -562,21 +584,21 @@
 <li>From the command line, use standard installation commands to install the package.</li>
 </ol>
 <h3 id="installing-on-macos">Installing on macOS</h3>
-<p>The RIDE is the default UI for Dyalog on macOS and is installed at the same time as Dyalog (see the Dyalog for macOS Installation and Configuration Guide); no further installation is required.</p>
+<p>The RIDE is the default UI for Dyalog on macOS and is installed at the same time as Dyalog (see the <a href="https://docs.dyalog.com/latest/Dyalog%20for%20macOS%20Installation%20and%20Configuration%20Guide.pdf">Dyalog for macOS Installation and Configuration Guide</a>); no further installation is required.</p>
 <p>To install the RIDE as a separate, stand-alone, product</p>
 <ol>
-<li>Download the RIDE's .pkg file from my.dyalog.com.</li>
+<li>Download the RIDE's .pkg file from <a href="https://my.dyalog.com/">my.dyalog.com</a>.</li>
 <li>Double-click on the RIDE's .pkg file.</li>
 <li>Follow the instructions in the RIDE Installer window to successful completion of the installation process.</li>
 </ol>
-<p>Starting the RIDE adds its icon to the dock. To keep the RIDE icon in the dock permanently, right-click on the icon and select Options &gt; Keep in Dock from the drop-down list that appears.</p>
+<p>Starting the RIDE adds its icon to the dock. To keep the RIDE icon in the dock permanently, right-click on the icon and select <code>Options &gt; Keep in Dock</code> from the drop-down list that appears.</p>
 <h3 id="installing-on-microsoft-windows">Installing on Microsoft Windows</h3>
 <p>The installation process for the RIDE is the same irrespective of whether it is installed as a stand-alone product or on a machine that already has Dyalog installed.</p>
 <p>To install the RIDE</p>
 <ol>
 <li>Download the RIDE's .zip file from my.dyalog.com.</li>
-<li>Unzip the downloaded .zip file, placing the setup_ride.exe and setup_ride.msi files in the same location as each other.</li>
-<li>Double-click on the setup_ride.exe file.</li>
+<li>Unzip the downloaded .zip file, placing the <code>setup_ride.exe</code> and <code>setup_ride.msi</code> files in the same location as each other.</li>
+<li>Double-click on the <code>setup_ride.exe</code> file.</li>
 <li>Follow the instructions in the RIDE Installation window to successful completion of the installation process.</li>
 </ol>
 <h2 id="configuration-ini-file">Configuration (.ini) File</h2>
@@ -586,7 +608,7 @@
 <li>$HOME/.dyalog/ (on IBM AIX, macOS and Linux)</li>
 </ul>
 <p>This file is not automatically created by Dyalog but can be created manually. Examples of the fields that you might want to include within the .ini configuration file are included in <a href="../sample_configuration_file/">Appendix 1</a>.</p>
-<p>A different name and location for the .ini configuration file can be specified by including a second <code>mode</code>, <code>CONFIG</code>, in the <code>RIDE_INIT</code> parameter (see <a href="../ride_init/">Section 1.0.1</a>) and setting it so that <code>CONFIG=&lt;filename&gt;</code>, where <code>&lt;filename&gt;</code> is the fully-qualified path to, and name of, a .ini configuration file containing name-value pairs related to mode, certificate details, and so on.</p>
+<p>A different name and location for the .ini configuration file can be specified by including a second <code>mode</code>, <code>CONFIG</code>, in the <a href="../ride_init/">RIDE_INIT</a> parameter and setting it so that <code>CONFIG=&lt;filename&gt;</code>, where <code>&lt;filename&gt;</code> is the fully-qualified path to, and name of, a .ini configuration file containing name-value pairs related to mode, certificate details, and so on.</p>
 <p>The .ini configuration file must be located on the machine on which the interpreter is running (this is not necessarily the same machine as the one on which the RIDE is running).</p>
 
 
