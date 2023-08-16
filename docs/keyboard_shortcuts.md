@@ -1,11 +1,6 @@
-
-
-
-
 # Keyboard Shortcuts
 
-
-The Dyalog keyboard shortcuts that are supported by the RIDE are listed belowin [](#keyboard_shortcuts); those that can be configured in the Shortcuts tab of the Preferences dialog box (see [Section ](shortcuts_tab.md#)) are indicated with a * character.
+The Dyalog keyboard shortcuts that are supported by the RIDE are listed below; those that can be configured in the [Shortcuts tab](shortcuts_tab.md) of the Preferences dialog box are indicated with a * character.
 
 | Code | Command | Default Keystrokes | Description |
 | --- | --- | --- | --- |
@@ -19,14 +14,14 @@ The Dyalog keyboard shortcuts that are supported by the RIDE are listed belowin 
 | CAM* | Clear all trace/ stop/monitor |  | Remove any trace/stop/monitor flags (as set by `⎕TRACE` , `⎕STOP` and `⎕MONITOR` ) from all functions in the workspace |
 | CAW* | Close all windows |  | Close all open Edit and Trace windows |
 | CBP* | Clear stops for active object |  | Edit / Trace : Clear all breakpoints (resets `⎕STOP` ) on the function(s). |
-| CNC* | Connect |  | Display the RIDE-Dyalog Session dialog box (see [Section ](the_ridedyalog_session_dialog_box.md#) ) |
-| CP | Copy | Linux: Ctrl + C macOS: ⌘ + C Windows: Ctrl + C | Session / Edit : Copy highlighted block of text to the clipboard |
-| CT | Cut | Linux: Ctrl + X macOS: ⌘ + X Windows: Ctrl + X | Session / Edit : Delete highlighted block of text and place it on the clipboard |
+| CNC* | Connect |  | Display the [RIDE-Dyalog Session dialog box](the_ridedyalog_session_dialog_box.md) |
+| CP | Copy | Linux: <kbd>Ctrl</kbd> + <kbd>C</kbd> macOS: <kbd>⌘</kbd> + <kbd>C</kbd> Windows: <kbd>Ctrl</kbd> + <kbd>C</kbd> | Session / Edit : Copy highlighted block of text to the clipboard |
+| CT | Cut | Linux: <kbd>Ctrl</kbd> + <kbd>X</kbd> macOS: <kbd>⌘</kbd> + <kbd>X</kbd> Windows: <kbd>Ctrl</kbd> + <kbd>X</kbd> | Session / Edit : Delete highlighted block of text and place it on the clipboard |
 | DB | Backspace | Backspace | Delete character to left of cursor |
 | DC | Down cursor | Down Arrow | Move cursor down one character |
-| DI | Delete item | Linux: Delete macOS: Fn + Backspace Windows: Delete | Delete character to right of cursor |
+| DI | Delete item | Linux: Delete macOS: <kbd>Fn</kbd> + <kbd>Backspace</kbd> Windows: <kbd>Delete</kbd> | Delete character to right of cursor |
 | DK* | Delete lines | Delete | Session / Edit : Delete current line (or selected lines if selection exists) |
-| DL | Down limit | Linux: Ctrl + End macOS: ⌘ + Down Arrow Windows: Ctrl + End | Session : Move cursor to bottom right corner of Session log Edit : Move cursor to bottom right corner of content |
+| DL | Down limit | Linux: <kbd>Ctrl</kbd> + <kbd>End</kbd> macOS: <kbd>⌘</kbd> + <kbd>Down Arrow</kbd> Windows: <kbd>Ctrl</kbd> + <kbd>End</kbd> | Session : Move cursor to bottom right corner of Session log Edit : Move cursor to bottom right corner of content |
 | DMK* | Toggle key display mode |  | Functionality that could be useful when presenting demonstrations. Enables you to display your keystrokes and load/run a demo file. For more information on presenting demonstrations, enter `]Demo -?` in a Session. |
 | DMN* | Next line in demo |  |
 | DMP* | Previous line in demo |  |
@@ -41,9 +36,9 @@ The Dyalog keyboard shortcuts that are supported by the RIDE are listed belowin 
 | FX* | Fix the current function |  | Edit : Fixes the function without closing the Edit window |
 | HLP* | Help | F1 | Display the documentation for the system command, system name, control structure keyword or primitive glyph immediately to the left of the cursor |
 | HO | Home cursor | Linux: Ctrl + Home macOS: ⌘ + Up Arrow Windows: Ctrl + Home | Session : Move cursor to top left corner of Session log Edit : Move cursor to top left corner of content |
-| JBK* | Jump back | Ctrl + Shift + J | Edit (a class or namespace): move the cursor back to where the last double-click or Edit command ( <ED> ) was issued in the current Edit window. Repeatable. |
+| JBK* | Jump back | Ctrl + Shift + J | Edit (a class or namespace): move the cursor back to where the last double-click or Edit command (`<ED>`) was issued in the current Edit window. Repeatable. |
 | JSC* | Show JavaScript Console | F12 | Display the JavaScript console. Only necessary if requested by Dyalog Ltd. when reporting an issue. |
-| LBR* | Toggle Language bar |  | Toggle display of the Language bar (see [Section ](language_bar.md#) ) at the top of the Session window |
+| LBR* | Toggle Language bar |  | Toggle display of the [Language bar](language_bar.md) at the top of the Session window |
 | LC | Left cursor | Left Arrow | Move cursor left one character |
 | LL | Left limit | Linux: Home macOS: Fn + Left Arrow Windows: Home | Move cursor to the first non-blank character on the current line. If already there, move cursor to start of line. |
 | LN* | Toggle line numbers |  | Turn line numbers on/off in all windows of the same type as the active window |
@@ -54,19 +49,19 @@ The Dyalog keyboard shortcuts that are supported by the RIDE are listed belowin 
 | PF1* | Function Key 1 |  | <user-defined functionality> |
 | PF2* - PF10* | Function Keys 2 ‑ 10 | F2 - F10 | <user-defined functionality> |
 | PF11* - PF48* | Function Keys 11 ‑ 48 |  | <user-defined functionality> |
-| PRF* | Show preferences |  | Display the Preferences dialog box (see [Section ](preferences_dialog_box.md#) ) |
+| PRF* | Show preferences |  | Display the [Preferences dialog box](preferences_dialog_box.md) ) |
 | PT | Paste | Linux: Ctrl + V macOS: ⌘ + V Windows: Ctrl + V | Session / Edit : Paste the text contents of the clipboard at cursor |
 | PV* | Previous match |  | Edit / Trace : When performing a Search/Replace, locate first match before current one |
-| QCP | Quick Command Palette |  | Expose the underlying ( Monaco ) editor command palette |
+| QCP | Quick Command Palette |  | Expose the underlying (Monaco) editor command palette |
 | QIT* | Quit Session | Ctrl + Q | Terminate the Dyalog Session |
 | QT* | Close window (and lose changes) | Shift + Escape | Session : Undo changes to a previously-entered expression that has not been re-executed and advance the cursor to the next line Edit : Close without saving changes |
 | RC | Right cursor | Right Arrow | Move cursor right one character |
 | RD* | Reformat |  | Edit : Formats function to have correct indentation and spacing between tokens |
 | RL | Right limit | Linux: End macOS: Fn + Right Arrow Windows: End | Move cursor to the last non-blank character on the current line. If already there, move to end of line. |
-| RP* | Replace string |  | Edit : Replace. To do this, enter <RP> and type the string to replace the  current search string with (see <SC> ); enter <ER> to make the change. Enter <EP> to clear the field. |
+| RP* | Replace string |  | Edit : Replace. To do this, enter `<RP>` and type the string to replace the  current search string with (see `<SC>`); enter `<ER>` to make the change. Enter `<EP>` to clear the field. |
 | SA* | Select all | Linux: Ctrl + A macOS: ⌘ + A Windows: Ctrl + A | Select all text in the active window |
-| SBR* | Toggle Status bar |  | Toggle display of the Status bar (see [Section ](status_bar.md#) ) at the bottom of the Session window and floating Edit / Trace windows. |
-| SC* | Search | Ctrl + F | Edit / Trace : Search. To do this, enter <SC> , type the string to search for and then enter <ER> to find the first occurrence of the string. Enter <EP> to clear the field. Also see related <NX> , <PV> and <RP> . |
+| SBR* | Toggle Status bar |  | Toggle display of the [Status bar](status_bar.md) at the bottom of the Session window and floating Edit / Trace windows. |
+| SC* | Search | Ctrl + F | Edit / Trace : Search. To do this, enter `<SC>`, type the string to search for and then enter `<ER>` to find the first occurrence of the string. Enter `<EP>` to clear the field. Also see related `<NX>`, `<PV>` and `<RP>`. |
 | SI* | Strong interrupt |  | Suspend code execution as soon as possible (generally after completing execution of the primitive currently being processed) |
 | STL* | Skip to line |  | Trace : Move the current execution marker to the line on which the cursor is positioned |
 | TB* | Tab between windows | Ctrl + Tab | Move to next window in loop |
@@ -77,13 +72,13 @@ The Dyalog keyboard shortcuts that are supported by the RIDE are listed belowin 
 | TO* | Toggle fold |  | Edit : Open/Close outlined blocks (by default, outlines are shown) |
 | TVB* | Toggle view steps |  | Edit / Trace : Toggle display of an additional column at the left-hand side of the window in which break-points can be set/unset. Hiding this column does not remove any previously-set break points. |
 | TVO* | Toggle view outline |  | Edit : Toggle code folding/outlining for control structures (including `:Section` structures) and functions. When toggled, existing code in an open Edit window is automatically updated to reflect the new rules. |
-| TFR* | Refresh threads |  | Debug information window : Forces a refresh of the Threads area (see [Section ](debug_information_window.md#) ) |
+| TFR* | Refresh threads |  | [Debug information window](debug_information_window.md): Forces a refresh of the Threads area |
 | UC | Up cursor | Up Arrow | Move cursor up one character |
 | UL | Up limit | Linux: Ctrl + Home macOS: ⌘ + Up Arrow Windows: Ctrl + Home | Session : Move cursor to top left corner of Session log Edit : Move cursor to top left corner of content |
 | US | Up screen | Linux: Page Up macOS: Fn + Up Arrow Windows: Page Up | Move cursor up one screen |
 | VAL* | Evaluate selection or name |  | Edit : Evaluate the selected expression or name and display the result in the Session window. |
 | WI* | Weak interrupt | Ctrl + PauseBreak | Suspend code execution at the start of the next line (generally after completing execution of the statement currently being processed) |
-| WSE* | Toggle Workspace Explorer |  | Toggle display of the workspace explorer (see [Section ](workspace_explorer.md#) ) to the left of the Session window |
+| WSE* | Toggle Workspace Explorer |  | Toggle display of the [workspace explorer](workspace_explorer.md) to the left of the Session window |
 | ZM* | Toggle maximise Edit window |  | Toggle active Edit window between current size and full Session size |
 | ZMI* | Increase font size | Ctrl + = or Ctrl + Shift + = | Increase the size of the font in all the windows |
 | ZMO* | Decrease font size | Ctrl + - | Decrease the size of the font in all the windows |

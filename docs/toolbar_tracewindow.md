@@ -1,14 +1,6 @@
-
-
-
-
 ### Toolbar (Trace Window)
 
-
 The toolbar displayed at the top of the Edit window is shown in [](#tracewin_toolbar); the icons on this toolbar are detailed in [](#tracewin_toobar_icons)and the icons on this toolbar are detailed below.
-
-
-
 
 The Edit Window's toolbar
 

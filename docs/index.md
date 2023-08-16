@@ -12,8 +12,10 @@ RIDE can be extensively customised; this document assumes that the default confi
 
 ## Audience
 
+
 It is assumed that the reader has a working knowledge of Dyalog.
 
-For information on the resources available to help develop your Dyalog knowledge, see https://www.dyalog.com/introduction.htm. New users might also find that it is helpful to select the Show tips for glyphs check box in the [General tab](general_tab.md) of the **Preferences** dialog box.
+
+For information on the resources available to help develop your Dyalog knowledge, see https://www.dyalog.com/introduction.htm. New users might also find that it is helpful to select the Show tips for glyphs check box in the General tab of the Preferences dialog box, as detailed in [Section ](general_tab.md#)).
 
 
