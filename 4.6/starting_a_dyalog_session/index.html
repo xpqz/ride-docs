@@ -569,10 +569,13 @@
 
 
 <h1 id="starting-a-dyalog-session">Starting a Dyalog Session</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>When running a Dyalog Session through the RIDE, that Session should only be accessed through the RIDE. One exception to this rule is when developing or running applications that are <code>⎕SM</code>/<code>⎕SR</code> based; access to the <code>⎕SM</code> window cannot be made through the RIDE.</p>
+</div>
 <p>When running a Dyalog Session through the RIDE, the Session can be:</p>
 <ul>
-<li>local to the machine on which the RIDE is running.</li>
+<li>local to the machine on which the RIDE is running.    </li>
 <li>remote from the machine on which the RIDE is running.</li>
 <li>The operating system on which the remote interpreter is running is irrelevant – the instructions given in this chapter apply to the operating system on which the RIDE is running (the two operating systems do not have to be the same).</li>
 <li>The remote machine does not need to have the RIDE installed but the Dyalog Session must be RIDE-enabled (see <a href="../ride_init/">RIDE Init</a>).</li>
@@ -580,14 +583,18 @@
 <p>Connections between the RIDE and Dyalog interpreters are initialised through the RIDE-Dyalog Session dialog box. The exception to this is Zero Footprint use, which always requires Dyalog to be started first with suitable configuration parameters, after which the RIDE will appear when you direct a web browser at the APL interpreter. See <a href="../the_zero_footprint_ride/">Zero Footprint Ride</a> for more information on Zero Footprint mode.</p>
 <p>This chapter describes how to use the RIDE to run Dyalog Sessions, both local and remote.</p>
 <h2 id="the-ride-dyalog-session-dialog-box">The RIDE-Dyalog Session Dialog Box</h2>
-<p>When the RIDE is started, the RIDE‑Dyalog Session dialog box is displayed. The RIDE‑Dyalog Session dialog box comprises four areas, as shown below:</p>
+<p>When the RIDE is started, the <strong>RIDE‑Dyalog Session</strong> dialog box is displayed. The <strong>RIDE‑Dyalog Session</strong> dialog box comprises four areas, as shown below:</p>
 <ul>
 <li>the menu bar</li>
 <li>the list of configurations</li>
 <li>the basic information for the configuration selected in the configuration list</li>
 <li>the type-dependent information for the configuration selected in the configuration list</li>
 </ul>
-<p>[img here]</p>
+<figure>
+    ![RIDE-Dyalog Session dialog box](img/screenshots/s_connect_connecttoaninterpreter_labelled.png)
+    <figcaption>Areas of the RIDE-Dyalog Session dialog box (Microsoft Windows)</figcaption>
+</figure>
+
 <h3 id="menu-bar">Menu Bar</h3>
 <p>The RIDE's UI can vary slightly across different operating systems (and window managers); in particular, RIDE-specific menu bars can be located either within the development environment or in the global menu bar.</p>
 <p>The options available under the Dyalog menu are detailed here:</p>
