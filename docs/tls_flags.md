@@ -1,14 +1,8 @@
-
-
-
-
 ## TLS Flags
-
 
 TLS flags are employed as part of the certificate checking process; they determine whether a secure client or server can connect with a peer that does not have a valid certificate. When `Direction` is `Connect` or `Poll`, the RIDE acts as a server; when `Direction` is `Serve`, the RIDE acts as a client.
 
-
-The code numbers of the TLS flags described in [](#tlsflags) can be added together and passed to the `SSLValidation` field to control the certificate checking process. If you do not require any of these flags, then the `SSLValidation` field should be set to `0`.
+The code numbers of the TLS flags described below can be added together and passed to the `SSLValidation` field to control the certificate checking process. If you do not require any of these flags, then the `SSLValidation` field should be set to `0`.
 
 | Code | Name | Description |
 | --- | --- | --- |
@@ -21,7 +15,4 @@ The code numbers of the TLS flags described in [](#tlsflags) can be added togeth
 | 64 | RequestClientCertificate | Only valid when the RIDE is acting as a server; asks the client for a certificate but allows connections even if the client does not provide one. |
 | 128 | RequireClientCertificate | Only valid when the RIDE is acting as a server; asks the client for a certificate and refuses the connection if a valid certificate (subject to any other flags) is not provided by the client. |
 
-
 TLS flags have the same meaning irrespective of whether the RIDE is acting as a server or a client. However, for a server they are applied each time a new connection is established whereas for a client they are only applied when the client object is created.
-
-
