@@ -592,8 +592,11 @@
 </ul>
 <p><img alt="RIDE-Dyalog Session dialog box" src="../img/screenshots/s_connect_connecttoaninterpreter_labelled.png" /></p>
 <h3 id="menu-bar">Menu Bar</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>The RIDE's UI can vary slightly across different operating systems (and window managers); in particular, RIDE-specific menu bars can be located either within the development environment or in the global menu bar.</p>
-<p>The options available under the Dyalog menu are detailed here:</p>
+</div>
+<p>The options available under the <strong>Dyalog</strong> menu are detailed here:</p>
 <table>
 <thead>
 <tr>
@@ -604,19 +607,19 @@
 <tbody>
 <tr>
 <td>About Dyalog</td>
-<td>Displays the About dialog box, which provides details of the RIDE.</td>
+<td>Displays the <strong>About</strong> dialog box, which provides details of the RIDE.</td>
 </tr>
 <tr>
 <td>Preferences</td>
-<td>Opens the Preferences dialog box (see <a href="../preferences_dialog_box/">Section </a> ).</td>
+<td>Opens the <a href="../preferences_dialog_box/">Preferences</a> dialog box.</td>
 </tr>
 <tr>
 <td>Quit</td>
-<td>Closes the RIDE-Dyalog Session dialog box.</td>
+<td>Closes the <strong>RIDE-Dyalog Session</strong> dialog box.</td>
 </tr>
 </tbody>
 </table>
-<p>The options available under the Edit menu are detailed here:</p>
+<p>The options available under the <strong>Edit</strong> menu are detailed here:</p>
 <table>
 <thead>
 <tr>
@@ -653,15 +656,9 @@
 </table>
 <h3 id="list-of-configurations">List of Configurations</h3>
 <p>The list of configurations lists the names of previously-saved configurations. By default, a placeholder configuration called unnamed is present in the list of configurations with the Type set to Connect.</p>
-<h3 id="types">Types</h3>
-<p>The Type can be one of three options (selected from a drop-down list). The type that is selected determines the content of the type-dependent area. The options are:</p>
-<ul>
-<li>Start – the RIDE initiates and connects with a new local or remote interpreter (see <a href="../type_start/">Section </a>)</li>
-<li>Connect – a specific (local or remote) Dyalog interpreter is sought by the RIDE for connection (see <a href="../type_connect/">Section </a>)</li>
-<li>Listen – the RIDE waits for a local or remote interpreter to connect to it (see <a href="../type_listen/">Section </a>)</li>
-</ul>
 <p>Selecting a configuration from this list displays its basic information and type dependent information.</p>
-<p>At the bottom of the list of configurations is a bar containing four buttons, as shown belowin <a href="#listofconfigs"></a>. The buttons available are detailed in <a href="#listofconfigbuttonbar"></a>.</p>
+<p>At the bottom of the list of configurations is a bar containing four buttons:</p>
+<p><img alt="Button bar" src="../img/screenshots/s_listofconfigs_buttonbar.png" /></p>
 <p>The list of configurations' button bar</p>
 <table>
 <thead>
@@ -673,33 +670,41 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td><img alt="New" src="../img/screenshots/i_configlist_new.png" /></td>
 <td>New</td>
-<td>Creates a new entry in the list of configurations. The default name for a new configuration is unnamed .</td>
+<td>Creates a new entry in the <strong>list of configurations</strong>. The default name for a new configuration is <em>unnamed</em>.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="Clone" src="../img/screenshots/i_configlist_clone.png" /></td>
 <td>Clone</td>
-<td>Creates an exact copy of the configuration currently selected in the list of configurations . Details can then be changed in the cloned configuration without impacting the original.</td>
+<td>Creates an exact copy of the configuration currently selected in the <strong>list of configurations</strong>. Details can then be changed in the cloned configuration without impacting the original.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="Delete" src="../img/screenshots/i_configlist_delete.png" /></td>
 <td>Delete</td>
-<td>Prompts for confirmation before deleting the configuration currently selected in the list of configurations .</td>
+<td>Prompts for confirmation before deleting the configuration currently selected in the <strong>list of configurations</strong>.</td>
 </tr>
 <tr>
-<td></td>
+<td><img alt="Save" src="../img/screenshots/i_configlist_save.png" /></td>
 <td>Save</td>
-<td>Saves all items in the list of configurations .</td>
+<td>Saves all items in the <strong>list of configurations</strong>.</td>
 </tr>
 </tbody>
 </table>
-<p>In addition to the buttons, the following actions can be performed when a configuration is selected in the list of configurations:</p>
+<p>In addition to the buttons, the following actions can be performed when a configuration is selected in the <strong>list of configurations</strong>:</p>
 <ul>
 <li>activate the configuration</li>
 <li>amend the configuration</li>
 </ul>
 <p>A configuration can also be activated by clicking the  button to the right of its name in the list of configurations.</p>
+<h3 id="types">Types</h3>
+<p>The Type can be one of three options (selected from a drop-down list). The type that is selected determines the content of the type-dependent area. The options are:</p>
+<ul>
+<li><a href="../type_start/">Start</a> – the RIDE initiates and connects with a new local or remote interpreter</li>
+<li><a href="../type_connect/">Connect</a> – a specific (local or remote) Dyalog interpreter is sought by the RIDE for connection</li>
+<li><a href="../type_listen/">Listen</a> – the RIDE waits for a local or remote interpreter to connect to it</li>
+</ul>
+<p>Selecting a configuration from this list displays its basic information and type dependent information.</p>
 <h4 id="start">Start</h4>
 <p>The most common use of the RIDE is where the RIDE launches an APL interpreter process and connects to it. The RIDE allocates a random TCP port and instructs the launched interpreter to connect to it immediately. The RIDE is also able to launch remote processes on machines that support Secure Shell (SSH) logins, in which case the communication between the RIDE and the interpreter is also encrypted.</p>
 <p>To start a Dyalog Session</p>
