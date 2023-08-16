@@ -352,6 +352,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-dyalog-session-starts" class="md-nav__link">
+    The Dyalog Session starts.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-zero-footprint-ride" class="md-nav__link">
     The Zero Footprint RIDE
   </a>
@@ -544,6 +551,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#the-dyalog-session-starts" class="md-nav__link">
+    The Dyalog Session starts.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-zero-footprint-ride" class="md-nav__link">
     The Zero Footprint RIDE
   </a>
@@ -707,7 +721,8 @@
 <p>Selecting a configuration from this list displays its basic information and type dependent information.</p>
 <h4 id="start">Start</h4>
 <p>The most common use of the RIDE is where the RIDE launches an APL interpreter process and connects to it. The RIDE allocates a random TCP port and instructs the launched interpreter to connect to it immediately. The RIDE is also able to launch remote processes on machines that support Secure Shell (SSH) logins, in which case the communication between the RIDE and the interpreter is also encrypted.</p>
-<p>To start a Dyalog Session</p>
+<hr />
+<p><strong>To start a Dyalog Session</strong></p>
 <ol>
 <li>Open the RIDE-Dyalog Session dialog box.</li>
 <li>Select Start from the Type drop-down list.</li>
@@ -715,6 +730,7 @@
 <li>Select a security protocol from the drop-down list.</li>
 <li>Click START.</li>
 </ol>
+<hr />
 <p>In the Dyalog Session, selecting New Session in the <a href="../file_menu/">File menu</a> launches another instance of the interpreter whose path is specified in the path to executable field.</p>
 <h4 id="connect">Connect</h4>
 <p>The RIDE connects to a specific running (local or remote) Dyalog interpreter that is listening for connections. This is typically used when the RIDE is monitoring processes that have been started to provide some kind of service and to debug them if something unexpected happens.</p>
@@ -725,7 +741,8 @@
 </ul>
 <p>Your application can use <code>3502⌶</code> to enable debugging when it is appropriate (see <a href="../3502_ibeam_ride/">Section </a>).</p>
 <p>To safely experiment with configuring APL to listen for connections, leave the address field in the following examples empty, for example, <code>RIDE_INIT="SERVE::4502"</code>. If the address field is empty, then only local connections are allowed. The <code>*</code> used below instructs the interpreter to listen on all available network adapters.</p>
-<p>To start a Dyalog Session</p>
+<hr />
+<p><strong>To start a Dyalog Session</strong></p>
 <ol>
 <li>On the machine that the interpreter will run on, start a Dyalog Session, optionally specifying an IP address/DNS name and port that it will listen for RIDE connections on using the RIDE_INIT configuration parameter. If specified, this will override any RIDE_INIT values defined in a configuration file (see <a href="../configuration_ini_file/">Section 1.1</a>).</li>
 <li>On the machine that the RIDE is running on:Open the RIDE-Dyalog Session dialog box.Select Connect from the Type drop-down list.Optionally, check Save protocol log – this  records all communications between the interpreter and the RIDE. The default path/filename for this interpreter‑independent protocol log can be changed.Select a security protocol from the drop-down list.
@@ -756,9 +773,11 @@ The type-dependent information fields are displayed.</li>
 <li>Select a security protocol from the drop-down list.</li>
 <li>Click CONNECT.</li>
 </ol>
+<hr />
 <h4 id="listen">Listen</h4>
 <p>The RIDE waits for a local or remote interpreter to connect to it. This approach is more secure than configuring the interpreter to listen for connections, because an intruder will only be able to communicate with the RIDE rather than an APL system. An application that needs to be debugged can initiate the connection to a listening RIDE using <code>3502⌶</code> to set <code>RIDE_INIT</code> when debugging is desired (see <a href="../3502_ibeam_ride/">3502⌶ </a>).</p>
-<p>To start a Dyalog Session</p>
+<hr />
+<p><strong>To start a Dyalog Session</strong></p>
 <ol>
 <li>
 <p>On the machine that the RIDE is running on: Open the RIDE-Dyalog Session dialog box.Select Listen from the Type drop down list.
@@ -781,7 +800,7 @@ For example, if the RIDE is running on a machine that has DNS name jaypc.dyalog.
 </ul>
 </li>
 </ol>
-<p>The Dyalog Session starts.</p>
+<h2 id="the-dyalog-session-starts">The Dyalog Session starts.</h2>
 <h2 id="the-zero-footprint-ride">The Zero Footprint RIDE</h2>
 <p>The RIDE is an application that is implemented using a combination of HTML and Javascript. A full RIDE installation includes a small web server framework called Node/JS, which acts as a host for the application, and an embedded web browser that renders it to the user as a desktop application.</p>
 <p>Dyalog is able to act as a web server, hosting the RIDE application and making it available to any compatible web browser – this is known as "Zero Footprint" operation as the RIDE is not installed on the client machine but is downloaded by the web browser on demand. The advantage of the Zero Footprint RIDE is that an APL session can be monitored and maintained from any device with a suitable browser installed; no installation of RIDE is required.</p>
