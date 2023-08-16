@@ -12,6 +12,8 @@
         <link rel="prev" href="../the_dyalog_development_environment/">
       
       
+        <link rel="next" href="../customising_your_session/">
+      
       <link rel="icon" href="../img/favicon-32.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
@@ -334,15 +336,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#toolbar-edit-window" class="md-nav__link">
-    Toolbar (Edit Window)
+  <a href="#toolbar" class="md-nav__link">
+    Toolbar
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#search-and-replace-edit-window" class="md-nav__link">
-    Search and Replace (Edit Window)
+  <a href="#search-and-replace" class="md-nav__link">
+    Search and Replace
   </a>
   
 </li>
@@ -361,22 +363,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#search-trace-window" class="md-nav__link">
-    Search (Trace Window)
+  <a href="#search" class="md-nav__link">
+    Search
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#toolbar-trace-window" class="md-nav__link">
-    Toolbar (Trace Window)
+  <a href="#toolbar_1" class="md-nav__link">
+    Toolbar
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exiting-the-trace-window" class="md-nav__link">
-    Exiting the Trace Window
+  <a href="#exiting" class="md-nav__link">
+    Exiting
   </a>
   
 </li>
@@ -390,6 +392,66 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ride_specific_language_features.md" class="md-nav__link">
+        None
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customising_your_session/" class="md-nav__link">
+        Customising Your Session
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keyboard_shortcuts/" class="md-nav__link">
+        Keyboard Shortcuts
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sample_configuration_file/" class="md-nav__link">
+        Sample Configuration File
+      </a>
     </li>
   
 
@@ -436,15 +498,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#toolbar-edit-window" class="md-nav__link">
-    Toolbar (Edit Window)
+  <a href="#toolbar" class="md-nav__link">
+    Toolbar
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#search-and-replace-edit-window" class="md-nav__link">
-    Search and Replace (Edit Window)
+  <a href="#search-and-replace" class="md-nav__link">
+    Search and Replace
   </a>
   
 </li>
@@ -463,22 +525,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#search-trace-window" class="md-nav__link">
-    Search (Trace Window)
+  <a href="#search" class="md-nav__link">
+    Search
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#toolbar-trace-window" class="md-nav__link">
-    Toolbar (Trace Window)
+  <a href="#toolbar_1" class="md-nav__link">
+    Toolbar
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exiting-the-trace-window" class="md-nav__link">
-    Exiting the Trace Window
+  <a href="#exiting" class="md-nav__link">
+    Exiting
   </a>
   
 </li>
@@ -546,7 +608,7 @@
 <li>Double-click on/after <code>&lt;object name&gt;</code></li>
 </ul>
 <p>By default, the Edit window is docked to the right of the Session Window.</p>
-<h3 id="toolbar-edit-window">Toolbar (Edit Window)</h3>
+<h3 id="toolbar">Toolbar</h3>
 <p>The Edit Window's toolbar:</p>
 <table>
 <thead>
@@ -584,7 +646,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="search-and-replace-edit-window">Search and Replace (Edit Window)</h3>
+<h3 id="search-and-replace">Search and Replace</h3>
 <p>The  icon in the Edit window's toolbar opens the Search bar, enabling a search for every occurrence of a specified string (this can include APL glyphs) to be performed within the code in the Edit window; optionally, a replacement string can be applied on an individual basis.</p>
 <p>The Search bar (default)</p>
 <p>The  icon (Toggle replace mode) extends the Search bar to include a Replace field and related icons, as shown below.</p>
@@ -685,7 +747,7 @@ All occurrences of the specified string are highlighted in the Edit window and t
 <p>A Trace window can be opened from the Session window by entering  <code>&lt;expression&gt;</code> <code>&lt;TC&gt;</code>. This is an explicit trace and lets you step through the execution of any non-primitive functions/operators in the expression.</p>
 <p>By default, Dyalog is also configured to initiate an automatic trace whenever an error occurs, that is, the Trace window opens and becomes the active window and the line that caused the execution to suspend is selected. This is controlled by the interpreter configuration parameter <code>TRACE_ON_ERROR</code> (for information on configuration parameters, see the Dyalog for <operating system> Installation and Configuration Guide specific to the operating system that you are using).</p>
 <p>By default, the Trace window is docked beneath the Session and Edit windows. Other than setting/removing <a href="../breakpoints/">breakpoints</a>, Trace windows are read only.</p>
-<h3 id="search-trace-window">Search (Trace Window)</h3>
+<h3 id="search">Search</h3>
 <p>The  icon in the Trace window's toolbar opens the Search bar, enabling a search for every occurrence of a specified string (this can include APL glyphs) to be performed within the code in the Trace window.</p>
 <p>The Search Bar</p>
 <table>
@@ -734,7 +796,8 @@ All occurrences of the specified string are highlighted in the Trace window and 
 <li>Repeat step 3 as required (the search is cyclic).</li>
 <li>Press the Close button  to exit the search functionality.</li>
 </ol>
-<h3 id="toolbar-trace-window">Toolbar (Trace Window)</h3>
+<h3 id="toolbar_1">Toolbar</h3>
+<p>[IMG HERE]</p>
 <p>The Edit Window's toolbar</p>
 <table>
 <thead>
@@ -802,7 +865,7 @@ All occurrences of the specified string are highlighted in the Trace window and 
 </tr>
 </tbody>
 </table>
-<h3 id="exiting-the-trace-window">Exiting the Trace Window</h3>
+<h3 id="exiting">Exiting</h3>
 <p>To close the Trace window:</p>
 <ul>
 <li>click  in the Trace window's tab</li>
